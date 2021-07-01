@@ -32,7 +32,7 @@ def fetch_headlines(query):
         url = (
             "http://newsapi.org/v2/top-headlines?"
             "country=us&"
-            "apiKey=37f2607dcff648e391b3d365742ebbc6"
+            "apiKey="your api key"
         )
 
         response = requests.get(url)
