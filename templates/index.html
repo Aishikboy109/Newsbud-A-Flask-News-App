@@ -1,0 +1,40 @@
+{% extends "base.html" %} {% block content %}
+
+
+<h1 class="fw-bolder fst-italic animate__animated animate__lightSpeedInLeft" style="margin: auto;
+display: flex;
+justify-content: center; font-size: 23vh; text-decoration: underline; margin-bottom: 8%; margin-top: 8%;">Newsbud</h1>
+
+
+<h2 class="fw-bolder fst-italic animate__animated animate__lightSpeedInRight" style="margin: auto;
+display: flex;
+justify-content: center; font-size: 13vh; text-decoration: underline; margin-bottom: 8%; margin-top: 8%;">Headlines</h2>
+
+{% for i,j,k in master_list: %}
+
+<div
+  class=" animate__animated animate__rollIn container-fluid"
+  style="
+    display: block;
+    justify-content: center;
+    max-width: fit-content;
+    width: 100%;
+    flex-flow: row;
+  "
+>
+  <div
+    style="display: block; margin-left: 30%; margin-right: 30%"
+    class="card card border-warning mb-3"
+    style="width: 18rem"
+  >
+    <img src="{{ k }}" class="card-img-top" alt="loading image..." />
+    <div class="card-body">
+      <h1 class="card-title">{{ i }}</h1>
+
+      <h2 class="card-text">{{ j }}</h2>
+      <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+    </div>
+  </div>
+</div>
+
+{% endfor %} {% endblock %}
